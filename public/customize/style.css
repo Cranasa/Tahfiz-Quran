@@ -1,0 +1,78 @@
+body{
+   font-family: 'Figtree';
+}
+
+.required::after {
+  content: " *";
+  color: red;
+  /* margin-right: 4px; */
+}
+
+@media (max-width: 576px) {
+  .text-xs-center{
+      text-align: center;
+  }
+
+  .d-xs-none{
+      display: none!important;
+  }
+
+  .d-xs{
+      display: flex;
+  }
+
+  .mb-xs-2{
+    margin-bottom: 8px;
+  }
+
+  .mb-xs-3{
+    margin-bottom: 16px;
+  }
+
+  .text-xs-center{
+    text-align: center;
+  }
+
+  .w-xs-full{
+    width: 50%;
+  }
+
+  .fs-xs-12{
+    font-size: 12px;
+  }
+
+  .fs-xs-14{
+    font-size: 14px;
+  }
+
+  .float-xs-start {
+    float: left !important;
+  }
+
+  .mt-xs-3 {
+    margin-top: 16px;
+  }
+
+  .float-xs-start {
+    float: left !important;
+  }
+
+  .col-xs-6{
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .position-xs-absolute {
+    position: absolute !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .d-inline{
+    display: inline;
+  }
+
+  .d-sm-none{
+    display: none;
+  }
+}

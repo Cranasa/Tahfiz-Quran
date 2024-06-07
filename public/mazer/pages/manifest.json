@@ -1,0 +1,246 @@
+{
+  "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "/mazer/assets/compiled/fonts/bootstrap-icons.woff2",
+    "src": "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "app-dark.css": {
+    "file": "/mazer/assets/compiled/css/app-dark.css",
+    "src": "app-dark.css"
+  },
+  "app.css": {
+    "file": "/mazer/assets/compiled/css/app.css",
+    "src": "app.css"
+  },
+  "application-email.css": {
+    "file": "/mazer/assets/compiled/css/application-email.css",
+    "src": "application-email.css"
+  },
+  "/mazer/assets/static/fonts/Iconly---Bold.eot": {
+    "file": "/mazer/assets/compiled/eot/Iconly---Bold.eot",
+    "src": "/mazer/assets/static/fonts/Iconly---Bold.eot"
+  },
+  "/mazer/assets/static/fonts/Iconly---Bold.svg": {
+    "file": "/mazer/assets/compiled/svg/Iconly---Bold.svg",
+    "src": "/mazer/assets/static/fonts/Iconly---Bold.svg"
+  },
+  "/mazer/assets/static/fonts/Iconly---Bold.ttf": {
+    "file": "/mazer/assets/compiled/fonts/Iconly---Bold.ttf",
+    "src": "/mazer/assets/static/fonts/Iconly---Bold.ttf"
+  },
+  "/mazer/assets/static/fonts/Iconly---Bold.woff": {
+    "file": "/mazer/assets/compiled/fonts/Iconly---Bold.woff",
+    "src": "/mazer/assets/static/fonts/Iconly---Bold.woff"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-300-normal.woff": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-300-normal.woff",
+    "src": "/mazer/assets/static/fonts/nunito-latin-300-normal.woff"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-300-normal.woff2": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-300-normal.woff2",
+    "src": "/mazer/assets/static/fonts/nunito-latin-300-normal.woff2"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-400-normal.woff": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-400-normal.woff",
+    "src": "/mazer/assets/static/fonts/nunito-latin-400-normal.woff"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-400-normal.woff2": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-400-normal.woff2",
+    "src": "/mazer/assets/static/fonts/nunito-latin-400-normal.woff2"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-600-normal.woff": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-600-normal.woff",
+    "src": "/mazer/assets/static/fonts/nunito-latin-600-normal.woff"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-600-normal.woff2": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-600-normal.woff2",
+    "src": "/mazer/assets/static/fonts/nunito-latin-600-normal.woff2"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-700-normal.woff": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-700-normal.woff",
+    "src": "/mazer/assets/static/fonts/nunito-latin-700-normal.woff"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-700-normal.woff2": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-700-normal.woff2",
+    "src": "/mazer/assets/static/fonts/nunito-latin-700-normal.woff2"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-800-normal.woff": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-800-normal.woff",
+    "src": "/mazer/assets/static/fonts/nunito-latin-800-normal.woff"
+  },
+  "/mazer/assets/static/fonts/nunito-latin-800-normal.woff2": {
+    "file": "/mazer/assets/compiled/fonts/nunito-latin-800-normal.woff2",
+    "src": "/mazer/assets/static/fonts/nunito-latin-800-normal.woff2"
+  },
+  "/mazer/assets/static/images/bg/4853433.png": {
+    "file": "/mazer/assets/compiled/png/4853433.png",
+    "src": "/mazer/assets/static/images/bg/4853433.png"
+  },
+  "/mazer/assets/static/images/faces/1.jpg": {
+    "file": "/mazer/assets/compiled/jpg/1.jpg",
+    "src": "/mazer/assets/static/images/faces/1.jpg"
+  },
+  "/mazer/assets/static/images/faces/2.jpg": {
+    "file": "/mazer/assets/compiled/jpg/2.jpg",
+    "src": "/mazer/assets/static/images/faces/2.jpg"
+  },
+  "/mazer/assets/static/images/faces/3.jpg": {
+    "file": "/mazer/assets/compiled/jpg/3.jpg",
+    "src": "/mazer/assets/static/images/faces/3.jpg"
+  },
+  "/mazer/assets/static/images/faces/4.jpg": {
+    "file": "/mazer/assets/compiled/jpg/4.jpg",
+    "src": "/mazer/assets/static/images/faces/4.jpg"
+  },
+  "/mazer/assets/static/images/faces/5.jpg": {
+    "file": "/mazer/assets/compiled/jpg/5.jpg",
+    "src": "/mazer/assets/static/images/faces/5.jpg"
+  },
+  "/mazer/assets/static/images/faces/6.jpg": {
+    "file": "/mazer/assets/compiled/jpg/6.jpg",
+    "src": "/mazer/assets/static/images/faces/6.jpg"
+  },
+  "/mazer/assets/static/images/faces/7.jpg": {
+    "file": "/mazer/assets/compiled/jpg/7.jpg",
+    "src": "/mazer/assets/static/images/faces/7.jpg"
+  },
+  "/mazer/assets/static/images/faces/8.jpg": {
+    "file": "/mazer/assets/compiled/jpg/8.jpg",
+    "src": "/mazer/assets/static/images/faces/8.jpg"
+  },
+  "/mazer/assets/static/images/logo/favicon.svg": {
+    "file": "/mazer/assets/compiled/svg/favicon.svg",
+    "src": "/mazer/assets/static/images/logo/favicon.svg"
+  },
+  "/mazer/assets/static/images/logo/logo.svg": {
+    "file": "/mazer/assets/compiled/svg/logo.svg",
+    "src": "/mazer/assets/static/images/logo/logo.svg"
+  },
+  "/mazer/assets/static/images/samples/1.png": {
+    "file": "/mazer/assets/compiled/png/1.png",
+    "src": "/mazer/assets/static/images/samples/1.png"
+  },
+  "/mazer/assets/static/images/samples/2.png": {
+    "file": "/mazer/assets/compiled/png/2.png",
+    "src": "/mazer/assets/static/images/samples/2.png"
+  },
+  "/mazer/assets/static/images/samples/3.png": {
+    "file": "/mazer/assets/compiled/png/3.png",
+    "src": "/mazer/assets/static/images/samples/3.png"
+  },
+  "/mazer/assets/static/images/samples/4.png": {
+    "file": "/mazer/assets/compiled/png/4.png",
+    "src": "/mazer/assets/static/images/samples/4.png"
+  },
+  "/mazer/assets/static/images/samples/architecture1.jpg": {
+    "file": "/mazer/assets/compiled/jpg/architecture1.jpg",
+    "src": "/mazer/assets/static/images/samples/architecture1.jpg"
+  },
+  "/mazer/assets/static/images/samples/banana.jpg": {
+    "file": "/mazer/assets/compiled/jpg/banana.jpg",
+    "src": "/mazer/assets/static/images/samples/banana.jpg"
+  },
+  "/mazer/assets/static/images/samples/bg-mountain.jpg": {
+    "file": "/mazer/assets/compiled/jpg/bg-mountain.jpg",
+    "src": "/mazer/assets/static/images/samples/bg-mountain.jpg"
+  },
+  "/mazer/assets/static/images/samples/building.jpg": {
+    "file": "/mazer/assets/compiled/jpg/building.jpg",
+    "src": "/mazer/assets/static/images/samples/building.jpg"
+  },
+  "/mazer/assets/static/images/samples/error-403.svg": {
+    "file": "/mazer/assets/compiled/svg/error-403.svg",
+    "src": "/mazer/assets/static/images/samples/error-403.svg"
+  },
+  "/mazer/assets/static/images/samples/error-404.svg": {
+    "file": "/mazer/assets/compiled/svg/error-404.svg",
+    "src": "/mazer/assets/static/images/samples/error-404.svg"
+  },
+  "/mazer/assets/static/images/samples/error-500.svg": {
+    "file": "/mazer/assets/compiled/svg/error-500.svg",
+    "src": "/mazer/assets/static/images/samples/error-500.svg"
+  },
+  "/mazer/assets/static/images/samples/jump.jpg": {
+    "file": "/mazer/assets/compiled/jpg/jump.jpg",
+    "src": "/mazer/assets/static/images/samples/jump.jpg"
+  },
+  "/mazer/assets/static/images/samples/motorcycle.jpg": {
+    "file": "/mazer/assets/compiled/jpg/motorcycle.jpg",
+    "src": "/mazer/assets/static/images/samples/motorcycle.jpg"
+  },
+  "/mazer/assets/static/images/samples/origami.jpg": {
+    "file": "/mazer/assets/compiled/jpg/origami.jpg",
+    "src": "/mazer/assets/static/images/samples/origami.jpg"
+  },
+  "/mazer/assets/static/images/samples/water.jpg": {
+    "file": "/mazer/assets/compiled/jpg/water.jpg",
+    "src": "/mazer/assets/static/images/samples/water.jpg"
+  },
+  "/mazer/assets/static/images/svg-loaders/audio.svg": {
+    "file": "/mazer/assets/compiled/svg/audio.svg",
+    "src": "/mazer/assets/static/images/svg-loaders/audio.svg"
+  },
+  "/mazer/assets/static/images/svg-loaders/ball-triangle.svg": {
+    "file": "/mazer/assets/compiled/svg/ball-triangle.svg",
+    "src": "/mazer/assets/static/images/svg-loaders/ball-triangle.svg"
+  },
+  "/mazer/assets/static/images/svg-loaders/circles.svg": {
+    "file": "/mazer/assets/compiled/svg/circles.svg",
+    "src": "/mazer/assets/static/images/svg-loaders/circles.svg"
+  },
+  "/mazer/assets/static/images/svg-loaders/grid.svg": {
+    "file": "/mazer/assets/compiled/svg/grid.svg",
+    "src": "/mazer/assets/static/images/svg-loaders/grid.svg"
+  },
+  "/mazer/assets/static/images/svg-loaders/hearts.svg": {
+    "file": "/mazer/assets/compiled/svg/hearts.svg",
+    "src": "/mazer/assets/static/images/svg-loaders/hearts.svg"
+  },
+  "/mazer/assets/static/images/svg-loaders/oval.svg": {
+    "file": "/mazer/assets/compiled/svg/oval.svg",
+    "src": "/mazer/assets/static/images/svg-loaders/oval.svg"
+  },
+  "/mazer/assets/static/images/svg-loaders/puff.svg": {
+    "file": "/mazer/assets/compiled/svg/puff.svg",
+    "src": "/mazer/assets/static/images/svg-loaders/puff.svg"
+  },
+  "/mazer/assets/static/images/svg-loaders/rings.svg": {
+    "file": "/mazer/assets/compiled/svg/rings.svg",
+    "src": "/mazer/assets/static/images/svg-loaders/rings.svg"
+  },
+  "auth.css": {
+    "file": "/mazer/assets/compiled/css/auth.css",
+    "src": "auth.css"
+  },
+  "error.css": {
+    "file": "/mazer/assets/compiled/css/error.css",
+    "src": "error.css"
+  },
+  "form-editor-summernote.css": {
+    "file": "/mazer/assets/compiled/css/form-editor-summernote.css",
+    "src": "form-editor-summernote.css"
+  },
+  "iconly.css": {
+    "file": "/mazer/assets/compiled/css/iconly.css",
+    "src": "iconly.css"
+  },
+  "table-datatable-jquery.css": {
+    "file": "/mazer/assets/compiled/css/table-datatable-jquery.css",
+    "src": "table-datatable-jquery.css"
+  },
+  "table-datatable.css": {
+    "file": "/mazer/assets/compiled/css/table-datatable.css",
+    "src": "table-datatable.css"
+  },
+  "ui-icons-dripicons.css": {
+    "file": "/mazer/assets/compiled/css/ui-icons-dripicons.css",
+    "src": "ui-icons-dripicons.css"
+  },
+  "ui-widgets-chatbox.css": {
+    "file": "/mazer/assets/compiled/css/ui-widgets-chatbox.css",
+    "src": "ui-widgets-chatbox.css"
+  },
+  "ui-widgets-todolist.css": {
+    "file": "/mazer/assets/compiled/css/ui-widgets-todolist.css",
+    "src": "ui-widgets-todolist.css"
+  }
+}
