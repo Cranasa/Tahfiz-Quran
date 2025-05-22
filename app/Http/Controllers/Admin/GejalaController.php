@@ -33,11 +33,12 @@ class GejalaController extends Controller
 
     public function edit(Gejala $gejala)
     {
-        return view('admin.gejala.edit', compact('gejala'));
+        return view('pages.admin.gejala.edit', compact('gejala'));
     }
 
     public function update(Request $request, Gejala $gejala)
     {
+
         $request->validate([
             'kode' => 'required|unique:gejalas,kode,' . $gejala->id,
             'nama_gejala' => 'required'
@@ -46,6 +47,7 @@ class GejalaController extends Controller
         $gejala->update($request->all());
 
         return redirect()->route('gejala.index')->with('success', 'Gejala berhasil diperbarui');
+        
     }
 
     public function destroy(Gejala $gejala)

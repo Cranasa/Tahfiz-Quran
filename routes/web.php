@@ -5,6 +5,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\GejalaController;
+use App\Http\Controllers\Admin\KerusakanController;
+use App\Http\Controllers\Admin\BasisPengetahuanController;
+use App\Http\Controllers\DiagnosaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -45,6 +48,12 @@ Route::middleware('auth')->group(function(){
   });
 
   Route::resource('/admin/gejala', GejalaController::class)->names('gejala');
+  Route::resource('/admin/kerusakan', KerusakanController::class)->names('kerusakan');
+  Route::resource('/admin/basis-pengetahuan', BasisPengetahuanController::class)->names('basis-pengetahuan');
+
+  Route::get('/diagnosa', [DiagnosaController::class, 'form'])->name('diagnosa.form');
+  Route::post('/diagnosa', [DiagnosaController::class, 'proses'])->name('diagnosa.proses');
+
   Route::resource('/admin/aturan', \App\Http\Controllers\Admin\AturanController::class);
   Route::get('/diagnosa', [DiagnosaController::class, 'index'])->middleware('auth');
   Route::post('/diagnosa/proses', [DiagnosaController::class, 'proses'])->name('diagnosa.proses')->middleware('auth');

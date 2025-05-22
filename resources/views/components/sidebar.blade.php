@@ -86,6 +86,30 @@
                     </ul>
                 </li>
 
+                <li class="sidebar-item has-sub {{ Request::is('admin/kerusakan*') ? 'active' : '' }}">
+                    <a href="#" class='sidebar-link'>
+                        <i class="bi bi-tools"></i>
+                        <span>Manajemen Kerusakan</span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item {{ Request::is('admin/kerusakan*') ? 'active' : '' }}">
+                            <a href="{{ route('kerusakan.index') }}" class="submenu-link">Daftar Kerusakan</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item has-sub {{ Request::is('admin/basis-pengetahuan*') ? 'active' : '' }}">
+                    <a href="#" class='sidebar-link'>
+                        <i class="bi bi-book-half"></i>
+                        <span>Basis Pengetahuan</span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item {{ Request::is('admin/basis-pengetahuan*') ? 'active' : '' }}">
+                            <a href="{{ route('basis-pengetahuan.index') }}" class="submenu-link">Daftar Basis Pengetahuan</a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="sidebar-item {{ Request::is('profile*') ? 'active' : '' }}">
                     <a href="/profile/show" class='sidebar-link'>
                         <i class="bi bi-gear-fill"></i>
