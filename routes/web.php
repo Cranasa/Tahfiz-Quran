@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin\GejalaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -42,5 +43,12 @@ Route::middleware('auth')->group(function(){
     Route::get('/editfoto', [ProfileController::class, 'editfoto'])->name('profile.editfoto');
     Route::post('/editfoto', [ProfileController::class, 'storeEditFoto'])->name('profile.editfoto.update');
   });
+
+  Route::resource('/admin/gejala', GejalaController::class)->names('gejala');
+  Route::resource('/admin/aturan', \App\Http\Controllers\Admin\AturanController::class);
+  Route::get('/diagnosa', [DiagnosaController::class, 'index'])->middleware('auth');
+  Route::post('/diagnosa/proses', [DiagnosaController::class, 'proses'])->name('diagnosa.proses')->middleware('auth');
+
+
 
 });

@@ -44,50 +44,55 @@
       </div>
       <div class="sidebar-menu">
           <ul class="menu">
+                {{-- <li class="sidebar-title">Menu</li> --}}
 
-              {{-- <li class="sidebar-title">Menu</li> --}}
+                <li class="sidebar-item {{ Request::is('dashboard*') ? 'active' : '' }}">
+                    <a href="/dashboard" class='sidebar-link'>
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
 
-              <li class="sidebar-item  {{ Request::is('dashboard*') ? 'active' : '' }}">
-                  <a href="/dashboard" class='sidebar-link'>
-                      <i class="bi bi-grid-fill"></i>
-                      <span>Dashboard</span>
-                  </a>
-              </li>
-
-              <li class="sidebar-item has-sub {{ Request::is('user*') |
+                <li class="sidebar-item has-sub {{ Request::is('user*') |
                     Request::is('menu2*') |
                     Request::is('menu3*') ? 'active' : '' }} ">
-                  <a href="#" class='sidebar-link'>
-                      <i class="bi bi-person-fill"></i>
-                      <span>Data User</span>
-                  </a>
+                    <a href="#" class='sidebar-link'>
+                        <i class="bi bi-person-fill"></i>
+                        <span>Data User</span>
+                    </a>
 
-                  <ul class="submenu ">
+                    <ul class="submenu">
+                        <li class="submenu-item {{ Request::is('user*') ? 'active' : '' }} ">
+                            <a href="/user" class="submenu-link">User</a>
+                        </li>
+                        <li class="submenu-item {{ Request::is('menu2*') ? 'active' : '' }} ">
+                            <a href="#" class="submenu-link">Admin</a>
+                        </li>
+                        <li class="submenu-item {{ Request::is('menu1*') ? 'active' : '' }} ">
+                            <a href="#" class="submenu-link">Customer</a>
+                        </li>
+                    </ul>
+                </li>
 
-                      <li class="submenu-item {{ Request::is('user*') ? 'active' : '' }} ">
-                          <a href="/user" class="submenu-link">User</a>
-                      </li>
+                <li class="sidebar-item has-sub {{ Request::is('admin/gejala*') ? 'active' : '' }}">
+                    <a href="#" class='sidebar-link'>
+                        <i class="bi bi-clipboard2-pulse-fill"></i>
+                        <span>Manajemen Gejala</span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item {{ Request::is('admin/gejala*') ? 'active' : '' }}">
+                            <a href="{{ route('gejala.index') }}" class="submenu-link">Daftar Gejala</a>
+                        </li>
+                    </ul>
+                </li>
 
-                      <li class="submenu-item {{ Request::is('menu2*') ? 'active' : '' }} ">
-                          <a href="#" class="submenu-link">Admin</a>
-                      </li>
-
-                      <li class="submenu-item {{ Request::is('menu1*') ? 'active' : '' }} ">
-                          <a href="#" class="submenu-link">Customer</a>
-                      </li>
-
-                  </ul>
-
-              </li>
-
-              <li class="sidebar-item  {{ Request::is('profile*') ? 'active' : '' }}">
-                <a href="/profile/show" class='sidebar-link'>
-                    <i class="bi bi-gear-fill"></i>
-                    <span>Profile</span>
-                </a>
-              </li>
-
-          </ul>
+                <li class="sidebar-item {{ Request::is('profile*') ? 'active' : '' }}">
+                    <a href="/profile/show" class='sidebar-link'>
+                        <i class="bi bi-gear-fill"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+            </ul>
       </div>
   </div>
 </div>
