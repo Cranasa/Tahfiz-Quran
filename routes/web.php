@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\Admin\GejalaController;
+use App\Http\Controllers\Admin\StudentParentsController;
 use App\Http\Controllers\Admin\KerusakanController;
 use App\Http\Controllers\Admin\BasisPengetahuanController;
 use App\Http\Controllers\DiagnosaController;
@@ -34,6 +34,10 @@ Route::middleware('guest')->group(function(){
 
 Route::middleware('auth')->group(function(){
   Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+  Route::get('/parents', [StudentParentsController::class, 'index'])->name('parents.index');
+  Route::get('/parents/create', [StudentParentsController::class, 'create'])->name('parents.create');
+  Route::post('/parents/store', [StudentParentsController::class, 'store'])->name('parents.store');
 
   Route::get('/dashboard', DashboardController::class)->name('dashboard.index');
   Route::resource('/user', UserController::class);
