@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Motor Injection Diagnosis System</title>
+    <title>tahfiz Quran Al-fahd</title>
     
     <link rel="shortcut icon" href="/mazer/assets/compiled/svg/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="/mazer/assets/compiled/css/app.css">
@@ -20,7 +20,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #827b30 0%, #cacc54 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -47,7 +47,7 @@
         .logo {
             width: 60px;
             height: 60px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            /* background: linear-gradient(45deg, #667eea, #764ba2); */
             border-radius: 12px;
             display: inline-flex;
             align-items: center;
@@ -270,36 +270,36 @@
         
         <div class="logo-section">
             <div class="logo">
-                <i class="bi bi-gear-wide-connected"></i>
+                <img src="{{asset('img/logo/alfahd.png')}}" alt="" width="80px">
             </div>
             <h1 class="login-title">Login Page</h1>
-            <p class="login-subtitle">Sign in to access Motor Injection<br>Diagnosis Expert System</p>
+            <p class="login-subtitle">Selamat Datang Di Al-Fahd Tahfiz<br>Silahkan Masukkan Akun Anda Di Bawah</p>
         </div>
 
         <form action="{{ route('login.store') }}" method="POST" id="loginForm">
             @csrf
             
             <div class="form-group">
-                <label for="email" class="form-label">Email Address</label>
+                <label for="email" class="form-label">Masukan Email Anda</label>
                 <input 
                     type="email" 
                     id="email"
                     name="email" 
                     class="form-input"
-                    placeholder="Enter your email"
+                    placeholder="Masukan Email Anda"
                     value="{{ old('email') }}"
                     required
                 >
             </div>
 
             <div class="form-group">
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label">Kata Sandi </label>
                 <input 
                     type="password" 
                     id="password"
                     name="password" 
                     class="form-input"
-                    placeholder="Enter your password"
+                    placeholder="Masukan Sandi Anda"
                     value="{{ old('password') }}"
                     required
                 >
@@ -308,14 +308,14 @@
             <div class="form-options">
                 <div class="checkbox-wrapper">
                     <input type="checkbox" id="rememberMe" name="remember">
-                    <label for="rememberMe">Remember me</label>
+                    <label for="rememberMe">Ingat aku ya guys</label>
                 </div>
-                <a href="#" class="forgot-link">Forgot password?</a>
+                <a href="#" class="forgot-link">Lupa password kak?</a>
             </div>
 
             <button type="submit" class="login-button" id="loginBtn">
                 <i class="bi bi-box-arrow-in-right" style="margin-right: 8px;"></i>
-                Sign In
+                Masuk 
             </button>
         </form>
 
