@@ -26,23 +26,23 @@
             <tr>
               <th>No</th>
               <th>Nama</th>
+              <th>Email</th>
               <th>Nomor Hp</th>
               <th>Alamat </th>
 
             </tr>
           </thead>
           <tbody>
-            {{-- @foreach($data as $item)
+            @foreach($parents as $parent)
               <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $item->gejala->nama_gejala }}</td>
-                <td>{{ $item->kerusakan->nama_kerusakan }}</td>
-                <td>{{ $item->cf_pakar }}</td>
+                <td>{{ $parent->name }}</td>
+                <td>{{ $parent->email }}</td>
+                <td>{{ $parent->phone }}</td>
                 <td>
                   <div class="btn-group">
                     <button class="btn btn-icon icon-left btn-sm btn-danger btn-delete" 
-                            data-id="{{ $item->id }}" 
-                            data-name="Basis Pengetahuan {{ $item->gejala->nama_gejala }} - {{ $item->kerusakan->nama_kerusakan }}" 
+                            data-id="{{ $parent->id }}" 
                             data-bs-toggle="modal" 
                             data-bs-target="#modal-delete">
                       <i class="bi bi-trash"></i>
@@ -50,7 +50,7 @@
                   </div>
                 </td>
               </tr>
-            @endforeach --}}
+            @endforeach
           </tbody>
         </table>
       </div>
@@ -71,7 +71,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
           <form id="form-delete" method="POST">
-            @csrf @method('DELETE')
+            @csrf 
             <button type="submit" class="btn btn-danger">Hapus</button>
           </form>
         </div>
@@ -106,7 +106,7 @@
 
       $('.btn-delete').on('click', function(){
         $('#delete-name').html($(this).data('name'));
-        $('#form-delete').attr('action', '/basis-pengetahuan/' + $(this).data('id'));
+        $('#form-delete').attr('action', 'parents/delete/' + $(this).data('id'));
       });
     });
   </script>

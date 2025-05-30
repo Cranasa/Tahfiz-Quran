@@ -16,7 +16,11 @@ class StudentParentsController extends Controller
      */
     public function index()
     {
-        return view('pages.Parents.index'); 
+       $parents = StudentParents::with(['user'])
+       ->orderBy('created_at','desc')
+       ->get();
+        return view('pages.Parents.index', compact('parents')); 
+        
     }
 
     /**
@@ -32,6 +36,7 @@ class StudentParentsController extends Controller
      */
     public function store(Request $request)
     {
+        
 
         $request->validate([
             'name'=> 'required|string|max:255',
@@ -39,7 +44,7 @@ class StudentParentsController extends Controller
             'password' => ['required','confirmed',Rules\Password::defaults()],
             'phone' => 'required|string|max:20',
             'address' => 'required|string|max:255',
-          ]);   
+          ]);  
     
           $user = User::create([
             'name' => $request->name,
@@ -50,12 +55,12 @@ class StudentParentsController extends Controller
     
           $parent = StudentParents::create([
             'user_id' => $user -> id,
-            'name' => $request->name,
+            'name' => $user -> name,
             'email' => $request -> email,
             'phone' => $request->phone,
             'address' => $request -> address,
           ]);
-    
+          
           return redirect()->route('parents.index')
           ->with('success','data berhasil di tambahkan'); //
     }
@@ -87,8 +92,11 @@ class StudentParentsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(StudentParents $parent)
     {
-        //
+        $parent->delete();
+
+        return redirect()->route('parents.index')
+            ->with('success', 'Data berhasil dihapus');
     }
-}
+} 

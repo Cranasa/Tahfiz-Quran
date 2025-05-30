@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function(){
   Route::get('/parents', [StudentParentsController::class, 'index'])->name('parents.index');
   Route::get('/parents/create', [StudentParentsController::class, 'create'])->name('parents.create');
   Route::post('/parents/store', [StudentParentsController::class, 'store'])->name('parents.store');
+  Route::post('/parents/delete/{id}', [StudentParentsController::class, 'destroy'])->name('parents.delete');
 
   Route::get('/dashboard', DashboardController::class)->name('dashboard.index');
   Route::resource('/user', UserController::class);
