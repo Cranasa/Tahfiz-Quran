@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
+use App\Models\StudentParents;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
 class StudentParentsController extends Controller
@@ -30,22 +32,21 @@ class StudentParentsController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'name'=> 'required|string|max:255',
             'email' => 'required|string|email|max:200',
             'password' => ['required','confirmed',Rules\Password::defaults()],
             'phone' => 'required|string|max:20',
             'address' => 'required|string|max:255',
-          ]);   //
-
-          dd($request->all());
+          ]);   
     
           $user = User::create([
             'name' => $request->name,
             'email' =>$request->email,
             'password' => Hash::make($request->password),
             'role'=>'parent',
-          ]);
+          ]);  
     
           $parent = StudentParents::create([
             'user_id' => $user -> id,
