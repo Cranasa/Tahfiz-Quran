@@ -7,7 +7,7 @@
 @section('content')
   <div class="card">
     <div class="card-header">
-      <a href="{{ route('basis-pengetahuan.create') }}" class="btn btn-icon icon-left btn-primary btn-sm">
+      <a href="{{ route('parents.create') }}" class="btn btn-icon icon-left btn-primary btn-sm">
         <i class="bi bi-plus-square"></i>
         <span class="ms-1">Tambah Data</span>
       </a>

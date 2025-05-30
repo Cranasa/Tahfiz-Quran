@@ -74,17 +74,13 @@
                     </ul>
                 </li>
 
-                <li class="sidebar-item has-sub {{ Request::is('admin/gejala*') ? 'active' : '' }}">
-                    <a href="#" class='sidebar-link'>
-                        <i class="bi bi-clipboard2-pulse-fill"></i>
-                        <span>Manajemen Gejala</span>
+                <li class="sidebar-item {{ Request::is('parents*') ? 'active' : '' }}">
+                    <a href="{{ route('parents.index') }}" class='sidebar-link'>
+                        <i class="bi bi-people-fill"></i>
+                        <span>Orang Tua Santri</span>
                     </a>
-                    <ul class="submenu">
-                        <li class="submenu-item {{ Request::is('admin/gejala*') ? 'active' : '' }}">
-                            <a href="{{ route('gejala.index') }}" class="submenu-link">Daftar Gejala</a>
-                        </li>
-                    </ul>
                 </li>
+
 
                 <li class="sidebar-item has-sub {{ Request::is('admin/kerusakan*') ? 'active' : '' }}">
                     <a href="#" class='sidebar-link'>
