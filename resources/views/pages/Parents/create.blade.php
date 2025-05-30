@@ -103,15 +103,4 @@
 @endsection
 
 
-{{-- CREATE TABLE student_parents (
-    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id BIGINT UNSIGNED NOT NULL,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE,
-    phone VARCHAR(20),
-    address TEXT,
-    created_at TIMESTAMP NULL DEFAULT NULL,
-    updated_at TIMESTAMP NULL DEFAULT NULL,
-    
-    CONSTRAINT fk_student_parents_user_id FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-); --}}
+
