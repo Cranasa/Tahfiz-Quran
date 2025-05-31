@@ -5,9 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\StudentParentsController;
-use App\Http\Controllers\Admin\KerusakanController;
-use App\Http\Controllers\Admin\BasisPengetahuanController;
-use App\Http\Controllers\DiagnosaController;
+use App\Http\Controllers\ClassRoomController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +41,10 @@ Route::middleware('auth')->group(function(){
   Route::get('/dashboard', DashboardController::class)->name('dashboard.index');
   Route::resource('/user', UserController::class);
 
+  Route::get('/classroom', [ClassRoomController::class, 'index'])->name('classroom.index');
+  Route::get('/classroom/create', [ClassRoomController::class, 'create'])->name('classroom.create');
+  Route::post('/classroom/store', [ClassRoomController::class, 'store'])->name('classroom.store');
+  Route::post('/classroom/delete/{id}', [ClassRoomController::class, 'destroy'])->name('classroom.delete');
 
   Route::prefix('/profile')->group(function(){
     Route::get('/show', [ProfileController::class, 'index'])->name('profile.show');

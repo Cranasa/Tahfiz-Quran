@@ -1,25 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\StudentParents;
+use App\Models\Classroom;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
-class StudentParentsController extends Controller
+class ClassRoomController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
-       $parents = StudentParents::with(['user'])
-       ->orderBy('created_at','desc')
-       ->get();
-        return view('pages.Parents.index', compact('parents')); 
+       $parents = Classroom::all();
+      
+        return view('pages.Classroom.index', compact('parents')); 
         
     }
 
@@ -28,7 +26,7 @@ class StudentParentsController extends Controller
      */
     public function create()
     {
-     return view('pages.Parents.create');
+     return view('pages.Classroom.Create');
     }
 
     /**
@@ -40,28 +38,16 @@ class StudentParentsController extends Controller
 
         $request->validate([
             'name'=> 'required|string|max:255',
-            'email' => 'required|string|email|max:200',
-            'password' => ['required','confirmed',Rules\Password::defaults()],
-            'phone' => 'required|string|max:20',
-            'address' => 'required|string|max:255',
+            'Deskripsi' => 'required|string|max:200',
           ]);  
     
-          $user = User::create([
+          $user = Classroom::create([
             'name' => $request->name,
-            'email' =>$request->email,
-            'password' => Hash::make($request->password),
-            'role'=>'parent',
+            'description' =>$request->Deskripsi,
           ]);  
     
-          $parent = StudentParents::create([
-            'user_id' => $user -> id,
-            'name' => $user -> name,
-            'email' => $request -> email,
-            'phone' => $request->phone,
-            'address' => $request -> address,
-          ]);
-          
-          return redirect()->route('parents.index')
+
+          return redirect()->route('classroom.index')
           ->with('success','data berhasil di tambahkan'); //
     }
 
@@ -97,16 +83,16 @@ class StudentParentsController extends Controller
     public function destroy(string $id)
     {
         // Find the parent record
-        $parent = StudentParents::findOrFail($id);
+        $classroom = classroom::findOrFail($id);
+
+        dd($classroom->all );
         
         // Find and delete the associated user
-        $user = User::findOrFail($parent->user_id);
-        $user->delete();
         
-        // Delete the parent record
-        $parent->delete();
+        // Delete the  record
+        $classroom->delete();
 
-        return redirect()->route('parents.index')
+        return redirect()->route('classrooms.index')
             ->with('success', 'Data berhasil dihapus');
     }
 } 
