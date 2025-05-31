@@ -27,7 +27,7 @@
               <th>No</th>
               <th>Nama Kelas</th>
               <th>Deskripsi</th>
-               
+              <th>Aksi</th>
 
             </tr>
           </thead>
@@ -74,7 +74,6 @@
                 <button type="submit" class="btn btn-danger">Hapus</button>
             </form>
         @endisset
-
         </div>
       </div>
     </div>

@@ -85,11 +85,11 @@
                 <li class="sidebar-item has-sub {{ Request::is('admin/kerusakan*') ? 'active' : '' }}">
                     <a href="#" class='sidebar-link'>
                         <i class="bi bi-tools"></i>
-                        <span>Manajemen Kerusakan</span>
+                        <span>Data Kelas</span>
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item {{ Request::is('admin/kerusakan*') ? 'active' : '' }}">
-                            <a href="{{ route('kerusakan.index') }}" class="submenu-link">Daftar Kerusakan</a>
+                        <li class="submenu-item {{ Request::is('/classroom*') ? 'active' : '' }}">
+                            <a href="{{ route('classroom.index') }}" class="submenu-link">Data Kelas</a>
                         </li>
                     </ul>
                 </li>
