@@ -9,15 +9,13 @@ class StudentParents extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'name','email', 'phone', 'address'];
+    protected $table = 'student_parents';
+    protected $fillable = ['user_id', 'name', 'email', 'phone', 'address'];
 
-
-    public function user(){
-        return $this->belongsto(User::class);
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
-
-    // public function students(){
-    //     return $this->hasMany(Student::class, 'parent_id');
-    // }
 }
+
 

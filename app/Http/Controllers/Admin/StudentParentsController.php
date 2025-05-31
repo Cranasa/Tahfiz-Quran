@@ -92,8 +92,16 @@ class StudentParentsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(StudentParents $parent)
+    public function destroy(string $id)
     {
+        // Find the parent record
+        $parent = StudentParents::findOrFail($id);
+        
+        // Find and delete the associated user
+        $user = User::findOrFail($parent->user_id);
+        $user->delete();
+        
+        // Delete the parent record
         $parent->delete();
 
         return redirect()->route('parents.index')
