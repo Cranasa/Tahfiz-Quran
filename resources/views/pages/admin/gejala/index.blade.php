@@ -63,8 +63,10 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <form id="form-delete" method="POST">
-            @csrf @method('DELETE')
+          <form id="form-delete" method="POST" action="{{ route('gejala.destroy', ':id') }}"></form>
+            <label for="delete-id" class="visually-hidden">ID Gejala</label>
+            <input type="hidden" name="id" id="delete-id">
+            @csrf 
             <button type="submit" class="btn btn-danger">Hapus</button>
           </form>
         </div>

@@ -80,19 +80,14 @@ class ClassRoomController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+   public function destroy(string $id)
     {
-        // Find the parent record
-        $classroom = classroom::findOrFail($id);
-
-        dd($classroom->all );
-        
-        // Find and delete the associated user
-        
-        // Delete the  record
-        $classroom->delete();
-
-        return redirect()->route('classrooms.index')
-            ->with('success', 'Data berhasil dihapus');
+        $class = Classroom::findOrFail($id);
+        if (!$class) {
+            return redirect()->route('classroom.index')->with('error', 'Data Kelas tidak ditemukan');
+        }
+        $class->delete();
+        return redirect()->route('classroom.index')->with('success', 'Data Kelas berhasil dihapus');
     }
+
 } 

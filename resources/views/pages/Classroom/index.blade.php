@@ -68,10 +68,13 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <form id="form-delete" method="GET">
-            @csrf 
-            <button type="submit" class="btn btn-danger">Hapus</button>
-          </form>
+        @isset($parent)
+            <form id="form-delete" method="POST" action="{{ route('classroom.delete', $parent->id) }}">
+                @csrf
+                <button type="submit" class="btn btn-danger">Hapus</button>
+            </form>
+        @endisset
+
         </div>
       </div>
     </div>
@@ -104,7 +107,7 @@
 
       $('.btn-delete').on('click', function(){
         $('#delete-name').html($(this).data('name'));
-        $('#form-delete').attr('action', 'classroom/delete/' + $(this).data('id'));
+        $('#form-delete').attr('action', '/classroom/delete/' + $(this).data('id'));
       });
     });
   </script>
