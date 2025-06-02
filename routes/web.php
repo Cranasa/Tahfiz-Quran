@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\StudentParentsController;
+use App\Http\Controllers\Admin\SantriController;
 use App\Http\Controllers\ClassRoomController;
 use App\Http\Controllers\Admin\UstadController;
 use Illuminate\Support\Facades\Auth;
@@ -33,6 +34,11 @@ Route::middleware('guest')->group(function(){
 
 Route::middleware('auth')->group(function(){
   Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+  Route::get('/santri', [SantriController::class, 'index'])->name('santri.index');
+  Route::get('/santri/create', [SantriController::class, 'create'])->name('santri.create');
+  Route::post('/santri/store', [SantriController::class, 'store'])->name('santri.store');
+  Route::post('/santri/delete/{id}', [SantriController::class, 'destroy'])->name('santri.delete');
 
   Route::get('/ustad', [UstadController::class, 'index'])->name('ustad.index');
   Route::get('/ustad/create', [UstadController::class, 'create'])->name('ustad.create');
