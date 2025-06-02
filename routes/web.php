@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\StudentParentsController;
 use App\Http\Controllers\ClassRoomController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\UstadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,11 @@ Route::middleware('guest')->group(function(){
 
 Route::middleware('auth')->group(function(){
   Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+  Route::get('/ustad', [UstadController::class, 'index'])->name('ustad.index');
+  Route::get('/ustad/create', [UstadController::class, 'create'])->name('ustad.create');
+  Route::post('/ustad/store', [UstadController::class, 'store'])->name('ustad.store');
+  Route::post('/ustad/delete/{id}', [UstadController::class, 'destroy'])->name('ustad.delete');
 
   Route::get('/parents', [StudentParentsController::class, 'index'])->name('parents.index');
   Route::get('/parents/create', [StudentParentsController::class, 'create'])->name('parents.create');
