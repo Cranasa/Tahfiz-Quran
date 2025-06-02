@@ -36,7 +36,6 @@ class UstadController extends Controller
      */
     public function store(Request $request)
     {
-        
 
         $request->validate([
             'name'=> 'required|string|max:255',
@@ -52,7 +51,8 @@ class UstadController extends Controller
             'password' => Hash::make($request->password),
             'role'=>'guru',
           ]);  
-    
+          
+
           $ustad = ustad::create([
             'user_id' => $user -> id,
             'nip' => $user -> nip,

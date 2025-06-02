@@ -65,7 +65,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="NIP" class="form-label">NIP</label>
-                  <input type="text" id="NIP" class="form-control" name="NIP" placeholder="masukan NIP" required>
+                  <input type="text" id="NIP" class="form-control" name="nip" placeholder="masukan NIP" required>
                   @error('NIP')
                     <div class="invalid-feedback">
                       <i class="bx bx-radio-circle"></i>
@@ -76,7 +76,7 @@
 
                 <div class="form-group">
                   <label for="Specialization" class="form-label">Specialization</label>
-                  <textarea class="form-control" id="Specialization" name="Specialization" rows="3" placeholder="Specialization" required></textarea>
+                  <textarea class="form-control" id="Specialization" name="speciallization" rows="3" placeholder="Specialization" required></textarea>
                   @error('Specialization')
                     <div class="invalid-feedback">
                       <i class="bx bx-radio-circle"></i>

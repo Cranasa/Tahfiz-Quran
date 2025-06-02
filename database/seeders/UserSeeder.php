@@ -17,13 +17,11 @@ class UserSeeder extends Seeder
           [
             'name' => 'Nama Admin',
             'email' => 'admin@gmail.com',
-            'address' => fake()->address(),
             'password' => 'password',
           ],
           [
             'name' => 'Nama Customer',
             'email' => 'customer@gmail.com',
-            'address' => fake()->address(),
             'password' => 'password',
           ],
         ])->each(fn($q) => User::create($q));

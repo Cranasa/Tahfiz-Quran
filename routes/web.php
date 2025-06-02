@@ -6,9 +6,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\StudentParentsController;
 use App\Http\Controllers\ClassRoomController;
+use App\Http\Controllers\Admin\UstadController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\UstadController;
 
 /*
 |--------------------------------------------------------------------------
