@@ -36,9 +36,9 @@
             @foreach($ustad as $ustad)
               <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $ustad->name }}</td>
-                <td>{{ $ustad->email }}</td>
-                <td>{{ $ustad->phone }}</td>
+                <td>{{ $ustad->user->name }}</td>
+                <td>{{ $ustad->user->email }}</td>
+                <td>{{ $ustad->nip }}</td>
                 <td>
                   <div class="btn-group">
                     <button class="btn btn-icon icon-left btn-sm btn-danger btn-delete" 

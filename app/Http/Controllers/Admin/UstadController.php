@@ -44,6 +44,8 @@ class UstadController extends Controller
             'nip' => 'required|string|max:20',
             'speciallization' => 'required|string|max:255',
           ]);  
+
+          
     
           $user = User::create([
             'name' => $request->name,
@@ -55,8 +57,8 @@ class UstadController extends Controller
 
           $ustad = ustad::create([
             'user_id' => $user -> id,
-            'nip' => $user -> nip,
-            'specialtization' => $request -> specialization,
+            'nip' => $request -> nip,
+            'specialization' => $request -> speciallization,
            
           ]);
           
